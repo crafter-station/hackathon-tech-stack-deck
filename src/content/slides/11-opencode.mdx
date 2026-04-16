@@ -1,0 +1,36 @@
+export const meta = {
+  slug: "opencode",
+  title: "Tool 2",
+  theme: "dark",
+};
+
+export const notes = [
+  "Now we take control.",
+  "We move from generated UI to real code.",
+  "We add one real feature and deploy it.",
+];
+
+export const references = [
+  {
+    label: "OpenCode",
+    href: "https://opencode.ai/",
+  },
+  {
+    label: "GitHub",
+    href: "https://github.com/",
+  },
+  {
+    label: "Vercel",
+    href: "https://vercel.com/",
+  },
+];
+
+<Prose>
+  <p className="text-sm uppercase tracking-[0.4em] text-zinc-500">Tool 2</p>
+  <h1>OpenCode</h1>
+  <div className="flex flex-wrap gap-3 text-xs uppercase tracking-[0.26em] text-zinc-500">
+    <span className="rounded-full border border-white/10 px-4 py-2">GitHub</span>
+    <span className="rounded-full border border-white/10 px-4 py-2">Vercel</span>
+  </div>
+  <p className="text-2xl tracking-[-0.04em] text-zinc-200">From prototype → real product</p>
+</Prose>

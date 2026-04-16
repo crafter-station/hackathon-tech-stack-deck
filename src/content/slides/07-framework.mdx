@@ -1,0 +1,32 @@
+export const meta = {
+  slug: "framework",
+  title: "Today’s Framework",
+  theme: "dark",
+};
+
+export const notes = [
+  "This is the only framework you need.",
+  "We’re going to go through all four steps today.",
+];
+
+<Prose>
+  <p className="text-sm uppercase tracking-[0.4em] text-zinc-500">Today’s framework</p>
+  <div className="grid gap-4 sm:grid-cols-2">
+    <div className="rounded-[1.75rem] border border-white/10 bg-white/[0.03] p-6">
+      <span className="block text-xs uppercase tracking-[0.3em] text-zinc-500">01</span>
+      <span className="mt-4 block text-2xl font-medium tracking-[-0.05em] text-white">Pick a small real problem</span>
+    </div>
+    <div className="rounded-[1.75rem] border border-white/10 bg-white/[0.03] p-6">
+      <span className="block text-xs uppercase tracking-[0.3em] text-zinc-500">02</span>
+      <span className="mt-4 block text-2xl font-medium tracking-[-0.05em] text-white">Build the simplest usable version</span>
+    </div>
+    <div className="rounded-[1.75rem] border border-white/10 bg-white/[0.03] p-6">
+      <span className="block text-xs uppercase tracking-[0.3em] text-zinc-500">03</span>
+      <span className="mt-4 block text-2xl font-medium tracking-[-0.05em] text-white">Publish it</span>
+    </div>
+    <div className="rounded-[1.75rem] border border-white/10 bg-white/[0.03] p-6">
+      <span className="block text-xs uppercase tracking-[0.3em] text-zinc-500">04</span>
+      <span className="mt-4 block text-2xl font-medium tracking-[-0.05em] text-white">Improve it</span>
+    </div>
+  </div>
+</Prose>
