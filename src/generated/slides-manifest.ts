@@ -63,7 +63,6 @@ export const slideRecords: SlideRecord[] = [
     meta: {
         "slug": "choosing-building-tech-stack",
         "title": "Choosing & Building Your Tech Stack",
-        "kicker": "Final deck",
         "theme": "dark"
     },
     notes: [

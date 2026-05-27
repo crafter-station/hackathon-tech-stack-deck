@@ -24,7 +24,6 @@ type SlideContent = {
 
 const slides: Record<number, SlideContent> = {
   1: {
-    kicker: "Final deck",
     title: "Choosing & Building Your Tech Stack for Your (Hackathon) Product",
     subtitle:
       "How to ship faster by choosing the right tools instead of reinventing everything",
