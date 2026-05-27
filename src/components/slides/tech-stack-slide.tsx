@@ -251,7 +251,7 @@ const slides: Record<number, SlideContent> = {
           headers: ["Need", "Tool"],
           rows: [
             ["Text generation", "OpenAI / Anthropic / Gemini"],
-            ["Chat UI / streaming", "Vercel AI SDK"],
+            ["LLM orchestration / streaming", "Vercel AI SDK"],
             ["RAG / embeddings", "Upstash Vector / Supabase Vector"],
             ["Prompt iteration", "Cursor / Claude Code"],
             ["Model routing", "Vercel AI Gateway"],
