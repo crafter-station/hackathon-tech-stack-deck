@@ -253,7 +253,6 @@ const slides: Record<number, SlideContent> = {
             ["Text generation", "OpenAI / Anthropic / Gemini"],
             ["LLM orchestration / streaming", "Vercel AI SDK"],
             ["RAG / embeddings", "Upstash Vector / Supabase Vector"],
-            ["Prompt iteration", "Cursor / Claude Code"],
             ["Model routing", "Vercel AI Gateway"],
             ["Background AI tasks", "Trigger.dev"],
             ["Observability / evals", "Langfuse"],
