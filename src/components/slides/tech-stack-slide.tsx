@@ -712,13 +712,14 @@ const slides: Record<number, SlideContent> = {
 
 export function TechStackSlide({ slideNumber }: { slideNumber: number }) {
   const slide = slides[slideNumber];
+  const compact = slideNumber === 26;
 
   if (!slide) {
     return null;
   }
 
   return (
-    <div className="space-y-6 lg:space-y-8">
+    <div className={compact ? "space-y-4" : "space-y-6 lg:space-y-8"}>
       {slide.kicker ? (
         <p className="text-sm uppercase tracking-[0.4em] text-zinc-500">
           {slide.kicker}
@@ -741,21 +742,41 @@ export function TechStackSlide({ slideNumber }: { slideNumber: number }) {
         </p>
       ))}
       {slide.sections ? (
-        <div className="grid max-w-6xl gap-4 lg:grid-cols-2">
+        <div
+          className={
+            compact
+              ? "grid max-w-7xl gap-3 lg:grid-cols-3"
+              : "grid max-w-6xl gap-4 lg:grid-cols-2"
+          }
+        >
           {slide.sections.map((section) => (
             <section
               key={`${section.title ?? section.quote ?? section.code ?? "table"}-${section.body?.[0] ?? ""}`}
-              className="rounded-[1.75rem] border border-white/10 bg-white/[0.035] p-5 shadow-2xl shadow-black/20"
+              className={
+                compact
+                  ? "rounded-[1.25rem] border border-white/10 bg-white/[0.035] p-4 shadow-2xl shadow-black/20"
+                  : "rounded-[1.75rem] border border-white/10 bg-white/[0.035] p-5 shadow-2xl shadow-black/20"
+              }
             >
               {section.title ? (
-                <h2 className="mb-4 text-xl font-semibold tracking-[-0.04em] text-white sm:text-2xl">
+                <h2
+                  className={
+                    compact
+                      ? "mb-2 text-lg font-semibold tracking-[-0.04em] text-white"
+                      : "mb-4 text-xl font-semibold tracking-[-0.04em] text-white sm:text-2xl"
+                  }
+                >
                   {section.title}
                 </h2>
               ) : null}
               {section.body?.map((text) => (
                 <p
                   key={text}
-                  className="mb-3 text-base leading-7 text-zinc-300 sm:text-lg"
+                  className={
+                    compact
+                      ? "mb-2 text-sm leading-6 text-zinc-300"
+                      : "mb-3 text-base leading-7 text-zinc-300 sm:text-lg"
+                  }
                 >
                   {text}
                 </p>
@@ -772,12 +793,22 @@ export function TechStackSlide({ slideNumber }: { slideNumber: number }) {
               ) : null}
               {section.table ? <SlideTable table={section.table} /> : null}
               {section.links ? (
-                <div className="mt-4 flex flex-wrap gap-2">
+                <div
+                  className={
+                    compact
+                      ? "mt-3 flex flex-wrap gap-1.5"
+                      : "mt-4 flex flex-wrap gap-2"
+                  }
+                >
                   {section.links.map((link) => (
                     <a
                       key={link.href}
                       href={link.href}
-                      className="rounded-full border border-white/10 bg-white/[0.04] px-3 py-1.5 text-xs font-medium text-zinc-200 transition hover:border-white/25 hover:bg-white/10 hover:text-white"
+                      className={
+                        compact
+                          ? "rounded-full border border-white/10 bg-white/[0.04] px-2.5 py-1 text-[11px] font-medium text-zinc-200 transition hover:border-white/25 hover:bg-white/10 hover:text-white"
+                          : "rounded-full border border-white/10 bg-white/[0.04] px-3 py-1.5 text-xs font-medium text-zinc-200 transition hover:border-white/25 hover:bg-white/10 hover:text-white"
+                      }
                       target="_blank"
                       rel="noreferrer"
                     >
@@ -801,7 +832,13 @@ export function TechStackSlide({ slideNumber }: { slideNumber: number }) {
         </div>
       ) : null}
       {slide.final ? (
-        <div className="max-w-4xl rounded-[2rem] border border-white/12 bg-white text-black p-6 text-2xl font-semibold leading-9 tracking-[-0.05em] shadow-2xl shadow-white/10 sm:text-3xl sm:leading-10">
+        <div
+          className={
+            compact
+              ? "max-w-5xl rounded-[1.25rem] border border-white/12 bg-white p-4 text-lg font-semibold leading-7 tracking-[-0.04em] text-black shadow-2xl shadow-white/10"
+              : "max-w-4xl rounded-[2rem] border border-white/12 bg-white p-6 text-2xl font-semibold leading-9 tracking-[-0.05em] text-black shadow-2xl shadow-white/10 sm:text-3xl sm:leading-10"
+          }
+        >
           {slide.final}
         </div>
       ) : null}
