@@ -726,7 +726,9 @@ export function TechStackSlide({ slideNumber }: { slideNumber: number }) {
         </p>
       ) : null}
       <div className="space-y-4">
-        <h1>{slide.title}</h1>
+        <h1 className="max-w-5xl text-5xl font-semibold leading-[0.95] tracking-[-0.08em] text-white sm:text-6xl lg:text-7xl">
+          {slide.title}
+        </h1>
         {slide.subtitle ? (
           <p className="max-w-3xl text-2xl leading-9 tracking-[-0.04em] text-zinc-200 sm:text-3xl sm:leading-10">
             {slide.subtitle}
