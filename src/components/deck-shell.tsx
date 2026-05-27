@@ -21,10 +21,10 @@ export function DeckShell({ slide, previous, next, children }: DeckShellProps) {
         <header className="mx-auto flex w-full max-w-7xl items-center justify-between gap-6 px-5 py-4 sm:px-8 lg:px-12 lg:py-5">
           <div>
             <p className="text-[11px] uppercase tracking-[0.32em] text-zinc-600">
-              Workshop
+              Hackathon product workshop
             </p>
             <h1 className="mt-2 text-sm font-medium uppercase tracking-[0.18em] text-zinc-200">
-              From Idea to Internet
+              Choosing & Building Your Tech Stack
             </h1>
           </div>
         </header>

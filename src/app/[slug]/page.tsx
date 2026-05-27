@@ -29,8 +29,8 @@ export async function generateMetadata({
   }
 
   return {
-    title: `${slide.meta.title} | From Idea to Internet`,
-    description: `Slide ${slide.index + 1} from the workshop presentation.`,
+    title: `${slide.meta.title} | Choosing & Building Your Tech Stack`,
+    description: `Slide ${slide.index + 1} from the hackathon tech stack presentation.`,
   };
 }
 

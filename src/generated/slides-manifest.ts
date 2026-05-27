@@ -3,21 +3,32 @@
 
 import type { ComponentType } from "react";
 
-import Slide1 from "@/content/slides/01-from-idea-to-internet.mdx";
-import Slide2 from "@/content/slides/02-iteration-velocity.mdx";
-import Slide3 from "@/content/slides/03-the-loop.mdx";
-import Slide4 from "@/content/slides/04-why-now.mdx";
-import Slide5 from "@/content/slides/05-product-engineers.mdx";
-import Slide6 from "@/content/slides/06-move-fast-but-care.mdx";
-import Slide7 from "@/content/slides/07-framework.mdx";
-import Slide8 from "@/content/slides/08-notes-to-quiz.mdx";
-import Slide9 from "@/content/slides/09-v0.mdx";
-import Slide10 from "@/content/slides/10-build-live.mdx";
-import Slide11 from "@/content/slides/11-opencode.mdx";
-import Slide12 from "@/content/slides/12-make-it-real.mdx";
-import Slide13 from "@/content/slides/13-publish.mdx";
-import Slide14 from "@/content/slides/14-after-you-ship.mdx";
-import Slide15 from "@/content/slides/15-now-lets-build.mdx";
+import Slide1 from "@/content/slides/01-title.mdx";
+import Slide2 from "@/content/slides/02-main-idea.mdx";
+import Slide3 from "@/content/slides/03-what-people-care-about.mdx";
+import Slide4 from "@/content/slides/04-hackathon-stack-mindset.mdx";
+import Slide5 from "@/content/slides/05-build-buy-fake.mdx";
+import Slide6 from "@/content/slides/06-default-stack.mdx";
+import Slide7 from "@/content/slides/07-frontend-ui.mdx";
+import Slide8 from "@/content/slides/08-authentication.mdx";
+import Slide9 from "@/content/slides/09-database-backend.mdx";
+import Slide10 from "@/content/slides/10-ai-features.mdx";
+import Slide11 from "@/content/slides/11-whatsapp-products.mdx";
+import Slide12 from "@/content/slides/12-kapso.mdx";
+import Slide13 from "@/content/slides/13-whapi-wasenderapi.mdx";
+import Slide14 from "@/content/slides/14-whatsapp-decision-tree.mdx";
+import Slide15 from "@/content/slides/15-background-jobs.mdx";
+import Slide16 from "@/content/slides/16-email-payments-notifications.mdx";
+import Slide17 from "@/content/slides/17-deployment.mdx";
+import Slide18 from "@/content/slides/18-example-ai-saas.mdx";
+import Slide19 from "@/content/slides/19-example-whatsapp-ai-bot.mdx";
+import Slide20 from "@/content/slides/20-example-paid-product.mdx";
+import Slide21 from "@/content/slides/21-example-internal-tool.mdx";
+import Slide22 from "@/content/slides/22-common-mistakes.mdx";
+import Slide23 from "@/content/slides/23-demo-first-approach.mdx";
+import Slide24 from "@/content/slides/24-personal-checklist.mdx";
+import Slide25 from "@/content/slides/25-final-checklist.mdx";
+import Slide26 from "@/content/slides/26-tool-links.mdx";
 
 export type SlideTheme = "dark" | "light";
 
@@ -46,325 +57,421 @@ export type SlideRecord = {
 
 export const slideRecords: SlideRecord[] = [
   {
-    fileName: "01-from-idea-to-internet.mdx",
-    href: "/from-idea-to-internet",
+    fileName: "01-title.mdx",
+    href: "/choosing-building-tech-stack",
     index: 0,
     meta: {
-        "slug": "from-idea-to-internet",
-        "title": "From Idea to Internet",
-        "kicker": "Workshop",
+        "slug": "choosing-building-tech-stack",
+        "title": "Choosing & Building Your Tech Stack",
+        "kicker": "Final deck",
         "theme": "dark"
     },
     notes: [
-        "Today is simple: we’re going to build something real and put it on the internet.",
-        "Not a demo. Not a tutorial. Something you can send to someone."
+        "Today we're going to talk about tech stacks, but not in a religious way. This is about choosing tools under pressure, especially when time is your most valuable resource.",
+        "You don't win by rebuilding everything from scratch. You win by making smart decisions about what to build, what to use, and what to fake for the demo."
     ],
     references: [],
     Component: Slide1,
   },
   {
-    fileName: "02-iteration-velocity.mdx",
-    href: "/iteration-velocity",
+    fileName: "02-main-idea.mdx",
+    href: "/dont-reinvent-under-pressure",
     index: 1,
     meta: {
-        "slug": "iteration-velocity",
-        "title": "The Real Skill",
+        "slug": "dont-reinvent-under-pressure",
+        "title": "The Main Idea",
         "theme": "dark"
     },
     notes: [
-        "Most people optimize for speed, learning tools and building fast.",
-        "But speed alone doesn’t get you anywhere.",
-        "What matters is how fast you can build, test, learn, and improve.",
-        "That’s the skill we’re practicing today."
+        "There is nothing wrong with reinventing the wheel when your goal is deep learning. Hackathons are different because time, energy, and sleep are limited.",
+        "The question is not whether you can build something from scratch. The question is whether you should build it from scratch right now.",
+        "For most infrastructure, the answer is no. Identify what is special about your idea and spend most of your energy there."
     ],
-    references: [
-        {
-            "label": "Rauch on iteration velocity",
-            "href": "https://x.com/rauchg/status/1681694545845833729"
-        },
-        {
-            "label": "Twitter fallback",
-            "href": "https://twitter.com/rauchg/status/1681694545845833729"
-        }
-    ],
+    references: [],
     Component: Slide2,
   },
   {
-    fileName: "03-the-loop.mdx",
-    href: "/the-loop",
+    fileName: "03-what-people-care-about.mdx",
+    href: "/what-people-care-about",
     index: 2,
     meta: {
-        "slug": "the-loop",
-        "title": "The Loop",
+        "slug": "what-people-care-about",
+        "title": "What People Care About",
         "theme": "dark"
     },
     notes: [
-        "This loop is everything.",
-        "If you can run this loop faster than others, you win.",
-        "Not because you’re smarter, because you learn faster."
+        "As engineers we often overvalue technical struggle. Users and judges mostly see the product, not the invisible infrastructure work.",
+        "If the demo is clear, useful, and polished, people remember it. If the demo breaks because you spent twelve hours fighting infrastructure, nobody cares that the stack was pure."
     ],
     references: [],
     Component: Slide3,
   },
   {
-    fileName: "04-why-now.mdx",
-    href: "/why-now",
+    fileName: "04-hackathon-stack-mindset.mdx",
+    href: "/hackathon-stack-mindset",
     index: 3,
     meta: {
-        "slug": "why-now",
-        "title": "Why Now",
+        "slug": "hackathon-stack-mindset",
+        "title": "The Hackathon Stack Mindset",
         "theme": "dark"
     },
     notes: [
-        "A few years ago, building something took weeks.",
-        "Now you can go from idea to live app in hours.",
-        "The bottleneck is no longer can you build it.",
-        "It’s can you turn ideas into something usable quickly."
+        "Every product has a product layer, a logic layer, and an infrastructure layer. Most hackathon teams accidentally spend too much time on infrastructure.",
+        "Use existing tools for infrastructure, then focus on product and logic. That's where the magic usually is."
     ],
-    references: [
-        {
-            "label": "Design to deploy",
-            "href": "https://vercel.com/blog/iterating-from-design-to-deploy"
-        },
-        {
-            "label": "AI-native development",
-            "href": "https://vercel.com/blog/ai-native-development"
-        }
-    ],
+    references: [],
     Component: Slide4,
   },
   {
-    fileName: "05-product-engineers.mdx",
-    href: "/product-engineers",
+    fileName: "05-build-buy-fake.mdx",
+    href: "/build-buy-fake",
     index: 4,
     meta: {
-        "slug": "product-engineers",
-        "title": "Who Wins Now",
+        "slug": "build-buy-fake",
+        "title": "Build vs Buy vs Fake",
         "theme": "dark"
     },
     notes: [
-        "The people who win now are not just developers.",
-        "They think about the product, the experience, the user.",
-        "They use whatever tools they need to make something real.",
-        "That’s what you’re going to practice today."
+        "You have three options: build, buy, or fake. Buy means using an existing platform, SDK, API, or library.",
+        "Fake means simulate something for the demo as long as you are honest about what is real and what is planned. The point is to be intentional."
     ],
-    references: [
-        {
-            "label": "Product engineers",
-            "href": "https://leerob.com/product-engineers"
-        }
-    ],
+    references: [],
     Component: Slide5,
   },
   {
-    fileName: "06-move-fast-but-care.mdx",
-    href: "/move-fast-but-care",
+    fileName: "06-default-stack.mdx",
+    href: "/default-hackathon-stack",
     index: 5,
     meta: {
-        "slug": "move-fast-but-care",
-        "title": "Fast Is Not Enough",
+        "slug": "default-hackathon-stack",
+        "title": "Default Stack",
         "theme": "dark"
     },
     notes: [
-        "Now there’s an important detail.",
-        "AI makes it easy to build something quickly.",
-        "But that doesn’t mean it’s good.",
-        "If your product is confusing, ugly, unclear, or not useful, people won’t use it.",
-        "So yes, move fast.",
-        "But care about what you’re making.",
-        "Even simple things can feel good if they’re clear and thoughtful."
+        "If someone asks what to use without overthinking, this is my default: Next.js, Tailwind, shadcn, v0, Clerk, Supabase or Neon, Drizzle, AI providers, Vercel AI SDK, Trigger.dev, Resend, and Vercel.",
+        "It is not the only good stack, but it is fast, documented, AI-friendly, and easy to deploy."
     ],
-    references: [
-        {
-            "label": "Craft and quality",
-            "href": "https://youtu.be/pCil7YNhNCU"
-        },
-        {
-            "label": "Written notes",
-            "href": "https://thomasharmond.substack.com/p/notes-on-craft-and-quality"
-        }
-    ],
+    references: [],
     Component: Slide6,
   },
   {
-    fileName: "07-framework.mdx",
-    href: "/framework",
+    fileName: "07-frontend-ui.mdx",
+    href: "/frontend-ui",
     index: 6,
     meta: {
-        "slug": "framework",
-        "title": "Today’s Framework",
+        "slug": "frontend-ui",
+        "title": "Frontend & UI",
         "theme": "dark"
     },
     notes: [
-        "This is the only framework you need.",
-        "We’re going to go through all four steps today."
+        "The interface matters more than engineers like to admit. A good demo with a clean UI feels more real.",
+        "Use v0 to get a first version of the UI, then edit it, connect it to the backend, and polish it enough that people understand immediately."
     ],
     references: [],
     Component: Slide7,
   },
   {
-    fileName: "08-notes-to-quiz.mdx",
-    href: "/notes-to-quiz",
+    fileName: "08-authentication.mdx",
+    href: "/authentication",
     index: 7,
     meta: {
-        "slug": "notes-to-quiz",
-        "title": "The Challenge",
+        "slug": "authentication",
+        "title": "Authentication",
         "theme": "dark"
     },
     notes: [
-        "This is something you would actually use.",
-        "Simple idea. Clear value.",
-        "Perfect for practicing the loop."
+        "Authentication looks simple until you need password reset, OAuth, protected routes, sessions, organizations, roles, and security.",
+        "Clerk is a favorite here because it works well with Next.js, has clear docs, and AI coding agents usually implement it reliably."
     ],
     references: [],
     Component: Slide8,
   },
   {
-    fileName: "09-v0.mdx",
-    href: "/v0",
+    fileName: "09-database-backend.mdx",
+    href: "/database-backend",
     index: 8,
     meta: {
-        "slug": "v0",
-        "title": "Tool 1",
+        "slug": "database-backend",
+        "title": "Database & Backend",
         "theme": "dark"
     },
     notes: [
-        "We’ll use v0 to go from idea to interface.",
-        "Don’t overthink it. Prompt, adjust, repeat.",
-        "The goal is not perfection. The goal is something usable."
+        "For most products, Postgres is a great default. Supabase is great when you want many things in one place, Neon is great for clean serverless Postgres, and Upstash is great for Redis, rate limiting, queues, and vector search.",
+        "Do not self-host a database during a hackathon unless you already know exactly what you are doing."
     ],
-    references: [
-        {
-            "label": "v0",
-            "href": "https://v0.dev/"
-        }
-    ],
+    references: [],
     Component: Slide9,
   },
   {
-    fileName: "10-build-live.mdx",
-    href: "/build-live",
+    fileName: "10-ai-features.mdx",
+    href: "/ai-features",
     index: 9,
     meta: {
-        "slug": "build-live",
-        "title": "Build (Live)",
+        "slug": "ai-features",
+        "title": "AI Features",
         "theme": "dark"
     },
     notes: [
-        "Follow along.",
-        "If it breaks, that’s fine.",
-        "We’re optimizing for speed, not perfection."
+        "AI demos are easy to make impressive and easy to make messy. A good AI product is not just calling GPT and showing text.",
+        "Start with a simple flow: take input, retrieve context if needed, call the model, stream the response, and store the result. Use the Vercel AI SDK, vector tools, and Trigger.dev where they fit."
     ],
     references: [],
     Component: Slide10,
   },
   {
-    fileName: "11-opencode.mdx",
-    href: "/opencode",
+    fileName: "11-whatsapp-products.mdx",
+    href: "/whatsapp-products",
     index: 10,
     meta: {
-        "slug": "opencode",
-        "title": "Tool 2",
+        "slug": "whatsapp-products",
+        "title": "WhatsApp Products",
         "theme": "dark"
     },
     notes: [
-        "Now we take control.",
-        "We move from generated UI to real code.",
-        "We add one real feature and deploy it."
+        "WhatsApp is tricky because people use the phrase WhatsApp API to mean very different things. The official Meta API is safer for production but has rules and limitations.",
+        "WhatsApp Web wrappers are more flexible for groups and hackathon demos, but they carry more risk. Choose based on the product behavior you need."
     ],
-    references: [
-        {
-            "label": "OpenCode",
-            "href": "https://opencode.ai/"
-        },
-        {
-            "label": "GitHub",
-            "href": "https://github.com/"
-        },
-        {
-            "label": "Vercel",
-            "href": "https://vercel.com/"
-        }
-    ],
+    references: [],
     Component: Slide11,
   },
   {
-    fileName: "12-make-it-real.mdx",
-    href: "/make-it-real",
+    fileName: "12-kapso.mdx",
+    href: "/kapso",
     index: 11,
     meta: {
-        "slug": "make-it-real",
-        "title": "Make It Real",
+        "slug": "kapso",
+        "title": "Kapso",
         "theme": "dark"
     },
     notes: [
-        "This is where it becomes a product.",
-        "Even if it’s simple, it actually does something useful."
+        "Kapso is the tool to mention for the serious WhatsApp path: CRMs, customer support, sales automation, and SaaS products with WhatsApp features.",
+        "The limitation is group behavior. If you need hackathon-style WhatsApp group features, the official API path may not be enough right now."
     ],
-    references: [
-        {
-            "label": "OpenAI docs",
-            "href": "https://platform.openai.com/docs"
-        }
-    ],
+    references: [],
     Component: Slide12,
   },
   {
-    fileName: "13-publish.mdx",
-    href: "/publish",
+    fileName: "13-whapi-wasenderapi.mdx",
+    href: "/whapi-wasenderapi",
     index: 12,
     meta: {
-        "slug": "publish",
-        "title": "Publish",
+        "slug": "whapi-wasenderapi",
+        "title": "Whapi & WasenderAPI",
         "theme": "dark"
     },
     notes: [
-        "Deployment is not optional.",
-        "Your app should have a URL.",
-        "That’s when the loop becomes real."
+        "For group bots, hackathon demos, and personal automation, tools like Whapi and WasenderAPI can be useful because they are closer to WhatsApp Web wrapper approaches.",
+        "They are great for experiments, but be honest about the tradeoffs before building a serious production company entirely on top of a wrapper."
     ],
     references: [],
     Component: Slide13,
   },
   {
-    fileName: "14-after-you-ship.mdx",
-    href: "/after-you-ship",
+    fileName: "14-whatsapp-decision-tree.mdx",
+    href: "/whatsapp-decision-tree",
     index: 13,
     meta: {
-        "slug": "after-you-ship",
-        "title": "After You Ship",
+        "slug": "whatsapp-decision-tree",
+        "title": "WhatsApp Decision Tree",
         "theme": "dark"
     },
     notes: [
-        "When something is live, you can share it.",
-        "People can try it.",
-        "You get feedback.",
-        "That’s how things start compounding."
+        "If the product is business-facing, customer-facing, or SaaS-like, start with Kapso. If it needs groups, fast demos, or personal WhatsApp behavior, look at Whapi or WasenderAPI.",
+        "The mistake is choosing a tool before understanding the WhatsApp behavior your product actually needs."
     ],
-    references: [
-        {
-            "label": "Surface area",
-            "href": "https://usefulfictions.substack.com/p/how-to-increase-your-surface-area"
-        }
-    ],
+    references: [],
     Component: Slide14,
   },
   {
-    fileName: "15-now-lets-build.mdx",
-    href: "/now-lets-build",
+    fileName: "15-background-jobs.mdx",
+    href: "/background-jobs",
     index: 14,
     meta: {
-        "slug": "now-lets-build",
-        "title": "Final Takeaway",
+        "slug": "background-jobs",
+        "title": "Background Jobs",
         "theme": "dark"
     },
     notes: [
-        "Don’t wait for a perfect idea.",
-        "Don’t build too much before shipping.",
-        "Put things into the world and iterate.",
-        "Pause. Now let’s build."
+        "Not everything should happen inside an API request. Reports, file processing, scraping, messages, and long AI tasks should usually run in a background job.",
+        "Trigger.dev gives you jobs, retries, queues, logs, and observability without forcing you to build all of that infrastructure yourself."
     ],
     references: [],
     Component: Slide15,
+  },
+  {
+    fileName: "16-email-payments-notifications.mdx",
+    href: "/email-payments-notifications",
+    index: 15,
+    meta: {
+        "slug": "email-payments-notifications",
+        "title": "Email, Payments, Notifications",
+        "theme": "dark"
+    },
+    notes: [
+        "These details are not always core, but they make a product feel real. A welcome email, payment page, upload flow, or notification can add a lot of product feel.",
+        "Use Resend for email, Stripe or Polar for payments, and UploadThing, Supabase Storage, or S3 for files. Do not build these from zero."
+    ],
+    references: [],
+    Component: Slide16,
+  },
+  {
+    fileName: "17-deployment.mdx",
+    href: "/deployment",
+    index: 16,
+    meta: {
+        "slug": "deployment",
+        "title": "Deployment",
+        "theme": "dark"
+    },
+    notes: [
+        "Deploy early, not at the end and not ten minutes before demo time. Deploy in the first hour even if the app only says hello world.",
+        "Environment variables, build errors, API keys, CORS, and database connections always have surprises. Early deployment makes those problems small."
+    ],
+    references: [],
+    Component: Slide17,
+  },
+  {
+    fileName: "18-example-ai-saas.mdx",
+    href: "/example-ai-saas",
+    index: 17,
+    meta: {
+        "slug": "example-ai-saas",
+        "title": "Example Stack: AI SaaS",
+        "theme": "dark"
+    },
+    notes: [
+        "For an AI SaaS, this stack is a strong default: Next.js, v0, Clerk, Neon, Drizzle, an AI provider, Vercel AI SDK, Trigger.dev, Resend, and Vercel.",
+        "This is the kind of stack that lets you build a real demo quickly."
+    ],
+    references: [],
+    Component: Slide18,
+  },
+  {
+    fileName: "19-example-whatsapp-ai-bot.mdx",
+    href: "/example-whatsapp-ai-bot",
+    index: 18,
+    meta: {
+        "slug": "example-whatsapp-ai-bot",
+        "title": "Example Stack: WhatsApp AI Bot",
+        "theme": "dark"
+    },
+    notes: [
+        "For a WhatsApp AI bot, the first decision is official API or wrapper. Use Kapso for business products and Whapi or WasenderAPI for groups or fast prototypes.",
+        "Then add a webhook backend, database, Redis if needed, AI provider, background jobs, and deployment."
+    ],
+    references: [],
+    Component: Slide19,
+  },
+  {
+    fileName: "20-example-paid-product.mdx",
+    href: "/example-paid-product",
+    index: 19,
+    meta: {
+        "slug": "example-paid-product",
+        "title": "Example Stack: Paid Product",
+        "theme": "dark"
+    },
+    notes: [
+        "If your product needs payments, do not build payment logic from scratch. Use Stripe or Polar.",
+        "Even in a hackathon, adding a pricing page or checkout flow can make the product feel much more complete."
+    ],
+    references: [],
+    Component: Slide20,
+  },
+  {
+    fileName: "21-example-internal-tool.mdx",
+    href: "/example-internal-tool",
+    index: 20,
+    meta: {
+        "slug": "example-internal-tool",
+        "title": "Example Stack: Internal Tool",
+        "theme": "dark"
+    },
+    notes: [
+        "Internal tools are great hackathon projects because they are easy to understand and easy to demo.",
+        "Generate the UI with v0, use shadcn components, add Clerk auth, store data in Supabase, add TanStack Table and Recharts, and deploy on Vercel."
+    ],
+    references: [],
+    Component: Slide21,
+  },
+  {
+    fileName: "22-common-mistakes.mdx",
+    href: "/common-hackathon-mistakes",
+    index: 21,
+    meta: {
+        "slug": "common-hackathon-mistakes",
+        "title": "Common Hackathon Mistakes",
+        "theme": "dark"
+    },
+    notes: [
+        "The biggest mistakes are choosing too many new tools, building too many features, and deploying too late.",
+        "A great demo usually has one strong flow, not ten incomplete flows. Do not be the team that built something cool but could not demo it."
+    ],
+    references: [],
+    Component: Slide22,
+  },
+  {
+    fileName: "23-demo-first-approach.mdx",
+    href: "/demo-first-approach",
+    index: 22,
+    meta: {
+        "slug": "demo-first-approach",
+        "title": "The Demo-First Approach",
+        "theme": "dark"
+    },
+    notes: [
+        "Before you build the app, design the demo. What will the user do, what will judges see, where is the wow moment, and what needs to be real?",
+        "If the wow moment is AI reading a PDF and generating a plan, that flow must work. Login, payments, or admin panels may be basic or mocked."
+    ],
+    references: [],
+    Component: Slide23,
+  },
+  {
+    fileName: "24-personal-checklist.mdx",
+    href: "/personal-checklist",
+    index: 23,
+    meta: {
+        "slug": "personal-checklist",
+        "title": "My Personal Checklist",
+        "theme": "dark"
+    },
+    notes: [
+        "Documentation matters more now because AI agents are better when tools have clean docs and common patterns.",
+        "You do not need to choose the final stack of your future company during a hackathon. Choose what gets you to a working product today."
+    ],
+    references: [],
+    Component: Slide24,
+  },
+  {
+    fileName: "25-final-checklist.mdx",
+    href: "/final-checklist",
+    index: 24,
+    meta: {
+        "slug": "final-checklist",
+        "title": "Final Checklist",
+        "theme": "dark"
+    },
+    notes: [
+        "If you remember one thing, remember this: build the magic and borrow the rest.",
+        "Use the tools, move fast, deploy early, make the demo work, and improve later if the product is worth it."
+    ],
+    references: [],
+    Component: Slide25,
+  },
+  {
+    fileName: "26-tool-links.mdx",
+    href: "/tool-links",
+    index: 25,
+    meta: {
+        "slug": "tool-links",
+        "title": "Q&A / Tool Links",
+        "theme": "dark"
+    },
+    notes: [
+        "Close by giving people this list so they remember what exists. Do not try to use all of these tools at once.",
+        "The point is to know what exists, pick the smallest set that helps you ship, and then go build."
+    ],
+    references: [],
+    Component: Slide26,
   }
 ];

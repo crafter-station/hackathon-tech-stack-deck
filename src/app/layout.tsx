@@ -13,8 +13,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "From Idea to Internet",
-  description: "Build something useful. Ship it today.",
+  title: "Choosing & Building Your Tech Stack",
+  description:
+    "A hackathon deck about choosing tools, building the magic, and shipping faster.",
 };
 
 export default function RootLayout({
