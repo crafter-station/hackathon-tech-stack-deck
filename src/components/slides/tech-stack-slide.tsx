@@ -221,7 +221,10 @@ const slides: Record<number, SlideContent> = {
             ["ORM", "Drizzle / Prisma"],
             ["Cache / rate limits", "Upstash Redis"],
             ["Vector search / RAG", "Upstash Vector / Supabase Vector"],
-            ["File storage", "Supabase Storage / S3 / UploadThing"],
+            [
+              "File storage",
+              "Supabase Storage / S3 / UploadThing / Vercel Blob",
+            ],
           ],
         },
       },
